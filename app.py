@@ -1,13 +1,18 @@
 from Classes.restaurante import Restaurante
 
 restaurante_praca = Restaurante('praça', 'Gourmet')
-restaurante_mexicano = Restaurante('Mexican Food', 'Mexicana')
-restaurante_japones = Restaurante('Japa', 'Japonesa')
+restaurante_praca.receber_avaliacao('Gui',10)
+restaurante_praca.receber_avaliacao('Lais',8)
+restaurante_praca.receber_avaliacao('Emy',2)
 
-restaurante_mexicano.alternar_estado()
-restaurante_praca.receber_avaliacao('gui',10)
-restaurante_praca.receber_avaliacao('jose',5)
-restaurante_japones.receber_avaliacao('jose',8)
+restaurante_mexicano = Restaurante('mexicano','comida')
+restaurante_mexicano.receber_avaliacao('Gui',5)
+
+restaurante_larissa = Restaurante('Larrisinha','x_salada')
+restaurante_larissa.receber_avaliacao('Daniel',4.2)
+restaurante_larissa.receber_avaliacao('Gaby',3.2)
+
+restaurante_larissa.alternar_estado()
 
 def main():
     Restaurante.listar_restaurantes()
